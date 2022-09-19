@@ -1,0 +1,51 @@
+import "oaidl.idl";
+
+
+[object, uuid(b8520af4-6403-4dca-988b-f4493a0b8ad9),
+oleautomation, helpstring("COMPlayaround Interoperability")]
+interface IcomPlayground1 : IDispatch
+{
+	HRESULT Echo([in] BSTR* echoString);
+	HRESULT sendClientdata([out] BSTR* outString);
+	HRESULT hiFromCOM([in] BSTR* inString, [out] BSTR* outString);
+};
+
+[object, uuid(b8520af5-6403-4dca-988b-f4493a0b8ad9),
+oleautomation, helpstring("COMPlayaround Interoperability")]
+interface IcomPlayground2 : IDispatch
+{
+	HRESULT Echo([in] BSTR* echoString);
+	HRESULT sendClientdata([out] BSTR* outString);
+	HRESULT setCOMUwUAttribute([in] BSTR* inString, [out] BSTR* outString);
+};
+
+[object, uuid(b8520af6-6403-4dca-988b-f4493a0b8ad9),
+oleautomation, helpstring("COMPlayaround Interoperability IcreateCOMPlaygrounObject")]
+//interface IcreateCOMPlaygrounObject
+interface IcreateCOMPlaygrounObject : IUnknown
+{
+	HRESULT setCOMPlaygroundName([in] BSTR comName);
+	//internal enum index for different mood of the UwU COM.
+	HRESULT setCOMPlaygroundPayloadtype([in] int type);
+};
+
+//typelib statement
+
+ [ uuid(b8520af7-6403-4dca-988b-f4493a0b8ad9),
+	 version(1.0),
+	 helpstring("COMPlayground Type Library")
+ ]
+ library CarLocalServerLib
+ {
+	 importlib("stdole32.tlb");
+	 [
+		 uuid(a662686c-1d25-4b21-b77a-446b27f7f86d),
+		 helpstring("COMPlaygroundLib")
+	 ]
+	 coclass comPlaygroundClass
+	 {
+		 [default] interface IcreateCOMPlaygrounObject;
+		 interface IcomPlayground1;
+		 interface IcomPlayground2;
+	 };
+ };
