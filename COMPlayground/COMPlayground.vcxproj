@@ -142,17 +142,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="COMPlayground.h" />
     <ClInclude Include="comPlaygroundcpp.h" />
-    <ClInclude Include="COMPlayground_h.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="comPlaygroundcpp.cpp" />
     <ClCompile Include="COMPlayground_i.c" />
     <ClCompile Include="COMPlayground_p.c" />
     <ClCompile Include="dllmain.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Midl Include="..\..\COMPlayground.idl" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Source.def" />

@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="COMPlayground_h.h">
+    <ClInclude Include="comPlaygroundcpp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="comPlaygroundcpp.h">
+    <ClInclude Include="COMPlayground.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -35,11 +35,6 @@
     <ClCompile Include="comPlaygroundcpp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Midl Include="..\..\COMPlayground.idl">
-      <Filter>Resource Files</Filter>
-    </Midl>
   </ItemGroup>
   <ItemGroup>
     <None Include="Source.def">

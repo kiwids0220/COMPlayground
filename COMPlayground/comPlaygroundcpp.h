@@ -2,7 +2,8 @@
 #include <Windows.h>
 #include <comutil.h>
 #include <stdio.h>
-#include "COMPlayground_h.h"
+#include "COMPlayground.h"
+
 
 
 // finally defeine COM class 

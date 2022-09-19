@@ -1,6 +1,6 @@
 // dllmain.cpp : Defines the entry point for the DLL application.
 #include "comPlaygroundcpp.h"
-
+#include <rpc.h>
 typedef HRESULT(__stdcall* _DllGetClassObject)(REFCLSID rclsid, REFIID riid, LPVOID* ppv);
 
 BOOL APIENTRY DllMain( HMODULE hModule,
